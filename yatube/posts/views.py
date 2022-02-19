@@ -9,9 +9,8 @@ LIMIT_POST = 10
 
 def index(request):
     template = 'posts/index.html'
-    posts = group.posts.select_related('group')
-    .all().order_by('-pub_date'
-    )[:settings.LIMIT_POST]
+    posts = group.posts.select_related(
+        'group').all()[:settings.LIMIT_POST]
     text = 'Последние обновления на сайте'
     context = {
         'posts': posts,
