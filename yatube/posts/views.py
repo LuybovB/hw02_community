@@ -9,7 +9,7 @@ LIMIT_POST = 10
 
 def index(request):
     template = 'posts/index.html'
-    posts = Post.objects.order_by('-pub_date')[:10]
+    posts = Post.objects.order_by('-pub_date')[:LIMIT_POST]
     text = 'Последние обновления на сайте'
     context = {
         'posts': posts,
@@ -21,7 +21,7 @@ def index(request):
 def group_list(request, slug):
     template = 'posts/group_list.html'
     group = get_object_or_404(Group, slug=slug)
-    posts = group.posts.select_related("group").all()[LIMIT_POST]
+    posts = group.posts.select_related("group").all()[:LIMIT_POST]
     text = 'Лев Толстой – зеркало русской революции.'
     context = {
         'group': group,
