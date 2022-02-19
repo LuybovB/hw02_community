@@ -9,7 +9,7 @@ LIMIT_POST = 10
 
 def index(request):
     template = 'posts/index.html'
-    posts = Post.objects.order_by('-pub_date')[LIMIT_POST]
+    posts = Post.objects.order_by('-pub_date')[:10]
     text = 'Последние обновления на сайте'
     context = {
         'posts': posts,
