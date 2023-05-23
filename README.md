@@ -23,7 +23,7 @@
 - tomli==2.0.0
 
 
-### Инструкция по установке
+### Инструкция по установке:
 
 Клонируем репозиторий
 
@@ -45,12 +45,12 @@
 
 <code>pip install -r requirements.txt</code>
 
-### Требования
+### Требования:
 Python 3.6 +
 
 Работает под ОС Linux, Windows, macOS, BSD
 
-### Автор проекта
+### Автор проекта:
 * Беркова Любовь
 * email: berkovalyubov@yandex.ru
 * Telegram: @LuybouB
